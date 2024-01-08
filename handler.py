@@ -5,7 +5,7 @@ import runpod
 from llama_cpp import Llama
 
 #TEST
-os.environ["LLAMA_ARGS"] = '{"model_path": "./models/openhermes-2.5-neural-chat-7b-v3-1-7b.Q4_K_M.gguf", "n_gpu_layers": -1, "n_ctx": 28000}'
+#os.environ["LLAMA_ARGS"] = '{"model_path": "./models/openhermes-2.5-neural-chat-7b-v3-1-7b.Q4_K_M.gguf", "n_gpu_layers": -1, "n_ctx": 28000}'
 
 args = json.loads(os.environ.get("LLAMA_ARGS", "{}"))
 llm = Llama(**args)
