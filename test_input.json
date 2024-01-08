@@ -1,5 +1,7 @@
 {
     "input": {
-        "prompt": "Me: Say hello.\nYou:"
+        "prompt": "Me: Say hello.\nYou:",
+        "max_tokens": 8000,
+        "stream": true
     }
 }
