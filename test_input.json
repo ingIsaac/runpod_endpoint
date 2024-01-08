@@ -1,6 +1,7 @@
 {
     "input": {
         "prompt": "Me: Say hello.\nYou:",
+        "temperature": 0.2,
         "max_tokens": 8000,
         "stream": true
     }
