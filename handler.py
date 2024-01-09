@@ -21,11 +21,10 @@ def handler(event):
     if stream: 
         response = llm.create_completion(**inp)
         for chunk in response:
-           yield str(chunk["choices"][0]["text"])
+           yield chunk["choices"][0]["text"]
     else:
         return llm.create_completion(**inp)
           
 runpod.serverless.start({
-   "handler": handler,
-   "return_aggregate_stream": True
+   "handler": handler
 })
