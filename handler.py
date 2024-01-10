@@ -17,11 +17,13 @@ def handler(event):
     
     inp = event["input"]  
     stream: bool = inp.get("stream", False)
-
+    buffer = ''
+    
     if stream: 
         response = llm.create_completion(**inp)
         for chunk in response:
-           yield chunk["choices"][0]["text"]
+            buffer += chunk["choices"][0]["text"]
+            yield buffer
     else:
         return llm.create_completion(**inp)
           
